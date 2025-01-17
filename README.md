@@ -3,6 +3,10 @@
 
 **SnowBall-CodeV.ai** is an open-source, AI-driven visual application builder framework. Designed for developers and enthusiasts, it provides an intuitive interface for generating and editing applications with minimal coding effort.
 
+**Screenshot**
+![Screenshot](/Screenshot.png)
+
+
 ## 🚀 Key Features
 - **AI-Driven Development**: Automate repetitive tasks, generate code snippets, and optimize workflows with the power of artificial intelligence.
 - **Visual Application Builder**: Create, edit, and manage applications through a drag-and-drop interface without diving deep into complex code.
