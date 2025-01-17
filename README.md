@@ -1,6 +1,26 @@
+
 # SnowBall-CodeV.ai
 
-A visual applicaiton builder framework driven by AI
+**SnowBall-CodeV.ai** is an open-source, AI-driven visual application builder framework. Designed for developers and enthusiasts, it provides an intuitive interface for generating and editing applications with minimal coding effort.
+
+## 🚀 Key Features
+- **AI-Driven Development**: Automate repetitive tasks, generate code snippets, and optimize workflows with the power of artificial intelligence.
+- **Visual Application Builder**: Create, edit, and manage applications through a drag-and-drop interface without diving deep into complex code.
+- **Customizable Framework**: Extend and adapt the framework to suit your specific development needs.
+
+## 🎯 Why SnowBall-CodeV.ai?
+While this project may not aim to disrupt the industry, it serves as a great resource for exploring the potential of AI in software development. It’s a platform for learning, experimentation, and collaboration.
+
+## 🛠️ Getting Started
+
+Follow these steps to set up the project locally:
+
+1. **Clone the repository**:  
+   ```bash
+   git clone https://github.com/yecwang/snowball-codev.ai.git
+
+2.	**Install dependencies**:
+
 ## NODE.JS
 
 - Node 16.x || 18.x
@@ -13,21 +33,7 @@ A visual applicaiton builder framework driven by AI
 docker run --name some-mysql  -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:8.0
 ```
 
-## Redis
 
-### Install Redis
-
-```
-docker run --name some-redis -p 6379:6379 -d redis
-```
-
-## Run
-
-### clone
-
-```
-git clone https://github.com/yecwang/tisoul-app-builder.git
-```
 
 ### Config
 
