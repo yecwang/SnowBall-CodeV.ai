@@ -1,10 +1,9 @@
 
-# SnowBall-CodeV.ai
 
 # SnowBall-CodeV.ai
 
 ⚠️ **Note: This project is currently under construction and not yet ready for use.**  
-Contributions, feedback, and ideas are welcome as the project evolves.
+
 
 **SnowBall-CodeV.ai** is an open-source, AI-driven visual application builder framework. Designed for developers and enthusiasts, it provides an intuitive interface for generating and editing applications with minimal coding effort.
 
