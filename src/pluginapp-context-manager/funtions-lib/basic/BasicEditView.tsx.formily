@@ -1,0 +1,239 @@
+import React, { useEffect, useState, useMemo } from 'react';
+import { useParams } from 'react-router-dom';
+import { createForm } from '@formily/core';
+import { FormProvider, createSchemaField, observer } from '@formily/react';
+import { Box, Typography, Button, Grid, TextField, Checkbox, MenuItem  } from '@mui/material';
+import { Input, FormItem, FormButtonGroup, Submit, Select } from '@formily/next';
+import { action } from '@formily/reactive'
+import SendIcon from '@mui/icons-material/Send';
+
+import { useSelector } from 'src/redux/store';
+
+import FunctionsIcon from '@mui/icons-material/Functions';
+import {
+  SharedContext,
+  Variable,
+} from 'src/pluginapp-context-manager/funtions-lib/utils/VariablesProvider';
+import { TPagesConfig } from 'src/pluginapp-context-manager/types';
+import { useLocales } from 'src/locales';
+
+const SchemaField = createSchemaField({
+  components: {
+    Input,
+    FormItem,
+    Checkbox,
+    Select: (selectProps) => {
+      const { value, onChange, enum: enumOptions = [], options = [], dataSource = [], ...props } = selectProps;
+      console.log(`selectProps: ${JSON.stringify(selectProps)}`);
+      const selectOptions = options.length ? options : (enumOptions.length ? enumOptions : dataSource);
+
+      return (
+        <TextField
+          {...props}
+          select
+          value={value || ''}
+          onChange={(e) => onChange(e.target.value)}
+        >
+          {selectOptions.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
+      );
+    },
+  },
+});
+const form = createForm();
+
+interface DynamicFormProps {
+  schema: any;
+  setNode: (node: any) => void;
+  node: any;
+}
+
+const DynamicForm = ({ schema, setNode, node }: DynamicFormProps) => {
+  const _onSubmit = (values: any) => {
+    console.group('DynamicForm');
+    const newData = { ...node.data };
+    // formConfig.fields.forEach((field) => {
+    //   newData[field.relationVar] = values[field.name];
+    // });
+    console.log(values);
+    // TODO: set variables
+    setNode({ ...node, data: values });
+    console.groupEnd();
+  };
+  const { t } = useLocales();
+  return (
+    <FormProvider form={form}>
+    <SchemaField schema={schema} />
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'flex-end',
+        padding: '10px',
+        width: '100%',
+      }}
+    >
+      <Submit onSubmit={_onSubmit}>
+        <Button
+          variant="text"
+          color="primary"
+        >
+          {t('submit')}
+        </Button>
+      </Submit>
+    </Box>
+  </FormProvider>
+  );
+};
+
+interface EditViewProps {
+  nodeConfig: any;
+  node: any;
+  setNode: (node: any) => void;
+  schemasConfig: SchemaConfig[];
+  icon?: React.ReactNode;
+}
+
+export interface SchemaConfig {
+  filed: string;
+  type: string;
+  required: boolean;
+  component: string;
+  relationField?: string;
+  description?: string;
+  componentStyle?: object;
+  enum?: {
+    label: string;
+    value: string;
+  }[];
+}
+
+interface ConvertOptions {
+  variables?: Variable[];
+  pages?: TPagesConfig[];
+}
+
+interface FieldSchema {
+  type: string;
+  required: boolean;
+  title: string;
+  'x-decorator': string;
+  'x-component': string;
+  'x-component-props': object;
+  'x-reactions'?: string[];
+  enum?: {
+    label: string;
+    value: string
+  }[];
+  options?: any;
+}
+
+const DynamicEditView = ({
+  nodeConfig,
+  node,
+  setNode,
+  schemasConfig,
+  icon = <FunctionsIcon sx={{ marginRight: 1 }} />,
+}: EditViewProps) => {
+  const _convertSchema = (schemasConfig: SchemaConfig[], { variables, pages}: ConvertOptions) => {
+    const schema = {
+      type: 'object',
+      properties: {},
+    };
+    for (const config of schemasConfig) {
+      const fieldSchema: FieldSchema = {
+        type: config.type,
+        required: false,
+        title: config.description || config.filed,
+        'x-decorator': 'FormItem',
+        'x-component': config.component,
+        'x-component-props': config.componentStyle || {
+          style: {
+            width: 240,
+          },
+        },
+      };
+      if (config.required) {
+        fieldSchema.required = true;
+        // @ts-ignore
+        // fieldSchema['x-rules'] =[
+        //   {
+        //     required: true,
+        //     message: `${config.description || config.filed} is required`,
+        //   },
+        // ];
+      }
+      if (config.component === 'Select') {
+        if (config.enum) {
+          fieldSchema.enum = config.enum;
+          fieldSchema.options = config.enum
+        }
+        if (config.relationField === 'variables') {
+          const selectOptions = variables?.map((variable) => ({
+            label: variable.name,
+            value: variable.id,
+          }));
+          fieldSchema.enum = selectOptions;
+          fieldSchema.options = selectOptions;
+        }
+        if (config.relationField === 'pages') {
+          const selectOptions = pages?.map((page) => ({
+            label: page.name.toString(),
+            value: page.path.toString(),
+          }));
+          fieldSchema.enum = selectOptions;
+          fieldSchema.options = selectOptions;
+        }
+      }
+      // @ts-ignore
+      schema.properties[config.filed] = fieldSchema;
+    }
+    return schema;
+  };
+  console.group('EditViewDynamicForm');
+  const project = useSelector((state) => state.project);
+  const params = useParams();
+  const projectID = Number(params.projectID);
+
+  const setting = project[projectID]?.setting || {};
+
+  const context = React.useContext(SharedContext);
+  const variables = context?.variables || [];
+  const pages: TPagesConfig[] = Array.isArray(setting?.pages) ? setting.pages : [];
+  const schema = _convertSchema(schemasConfig, { variables, pages });
+
+  useEffect(() => {
+    console.log('variables changed:', context?.variables);
+  }, [context]);
+  console.log(`context: ${JSON.stringify(context)}`);
+  console.log(`variables: ${JSON.stringify(variables)}`);
+  console.log(`pages: ${JSON.stringify(pages)}`);
+  console.log(`schema: ${JSON.stringify(schema)}`);
+  console.groupEnd();
+  return (
+    <Box
+      hidden={!(node?.type === nodeConfig.type)}
+      sx={{
+        marginTop: 2,
+        marginBottom: 2,
+        marginLeft: 3,
+        marginRight: 3,
+        padding: 2,
+        border: '1px solid #ddd',
+        borderRadius: 1,
+        backgroundColor: '#fafafa',
+      }}
+    >
+      <Typography variant="h4" gutterBottom sx={{ display: 'flex', alignItems: 'center' }}>
+        {icon}
+        {nodeConfig.description}
+      </Typography>
+      <DynamicForm schema={schema} setNode={setNode} node={node} />
+    </Box>
+  );
+};
+
+export default DynamicEditView;

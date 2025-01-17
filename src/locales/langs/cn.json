@@ -1,0 +1,275 @@
+{
+  "header": {
+    "project": {
+      "menu_title": "项目",
+      "create": "创建项目",
+      "open": "打开项目"
+    },
+    "template": {
+      "menu_title": "模板",
+      "create": "创建模板",
+      "open": "打开模板"
+    },
+    "developerment": {
+      "menu_title": "开发",
+      "save": "保存",
+      "run": "运行",
+      "publish": "发布"
+    },
+    "run_simulation": {
+      "title": "运行模拟器",
+      "starting": "启动中",
+      "closing": "关闭中",
+      "failed_tip": "项目启动失败，请刷新后再尝试！"
+    },
+    "title": {
+      "primary": "Application Builder",
+      "secondary": "应用开发 SAAS 平台"
+    }
+  },
+  "dashboard": {
+    "menu": {
+      "management": "管理"
+    }
+  },
+  "project": {
+    "title": "应用设计",
+    "setting": "设置",
+    "function": "方法",
+    "variable": "变量",
+    "metadata": "数据",
+    "texts": "多语言",
+    "create":"新建项目",
+    "list": "项目列表",
+    "open_history":"最近打开的项目",
+    "welcome": "欢迎来到Application Builder",
+    "status": {
+      "CREATED": "已创建",
+      "DESIGNING": "设计中",
+      "RELEASED": "已发布"
+    },
+    "pages": {
+      "title": "页面",
+      "attribute_editor": {
+        "save": "保存"
+      },
+      "menu": {
+        "add": "添加",
+        "copy": "复制",
+        "delete": "删除",
+        "move_up": "上移",
+        "move_down": "下移",
+        "rename": "重命名",
+        "new_group": "新建分组",
+        "new_page": "新建页面"
+      },
+      "components": {
+        "move_up": "上移",
+        "move_down": "下移",
+        "already_top": "已经在当前容器最顶部",
+        "already_bottom": "已经在当前容器最底部"
+      }
+    },
+    "new_edit": {
+      "title_create": "创建项目",
+      "title_edit": "编辑项目",
+      "name": "项目名称",
+      "name_placeholder": "请输入项目名称",
+      "description": "项目描述",
+      "description_placeholder": "请输入项目描述",
+      "submit": "提交",
+      "cancel": "取消",
+      "name_required": "请输入项目名称",
+      "description_required": "请输入项目描述"
+    },
+    "dashboard": {
+      "view": "查看",
+      "edit": "编辑",
+      "locked": "锁定",
+      "versionHistory": "版本",
+      "rename": "重命名",
+      "export": "导出",
+      "create_time": "创建时间",
+      "update_time": "更新时间",
+      "create_modal": {
+        "new":"新建项目",
+        "name":"方案名称",
+        "options":"新建方式",
+        "industry":"行业",
+        "subdivision":"细分",
+        "create":"创建",
+        "description":"项目描述"
+      },
+      "version_modal": {
+        "title": "版本历史",
+        "close": "关闭",
+        "number": "版本号",
+        "status": "状态",
+        "option": "操作",
+        "view": "查看",
+        "recovered": "覆盖"
+      },
+      "version_status": {
+        "UNPUBLISHED": "未发布",
+        "RELEASED_PROD": "已发布正式环境" ,
+        "RELEASED_TEST": "已发布测试环境"
+      },
+      "rename_modal": {
+        "title": "项目重命名",
+        "name": "项目名称",
+        "confirm": "保存",
+        "cancel": "取消"
+      },
+      "locked_modal": {
+        "title": "锁定项目",
+        "confirm": "确定",
+        "content": "锁定成功后，该方案为非编辑状态，需要进行解锁才能进行编辑",
+        "cancel": "取消"
+      }
+    }
+  },
+  "project_design": {
+    "header_toolbar": {
+      "exit": "退出",
+      "save": "保存",
+      "export": "导出",
+      "undo": "撤销",
+      "redo": "重做",
+      "fullscreen": "全屏",
+      "language": "多语言",
+      "verify": "检验",
+      "run": "运行",
+      "publish": "发布",
+      "saved_success": "项目配置保存成功",
+      "screen_capture": "截屏",
+      "refresh": "刷新"
+    },
+    "toolbox": {
+      "pages": "页面",
+      "component_tree": "组件树",
+      "components": "组件",
+      "icons": "图标",
+      "variables": "变量",
+      "functions": "方法",
+      "texts": "多语言",
+      "help": "帮助",
+      "search_placeholder": "搜索"
+    },
+    "variables": {
+      "name": "变量名称",
+      "edit": "编辑变量",
+      "search_placeholder": "搜索变量ID或变量说明",
+      "import": "导入变量",
+      "download": "下载变量",
+      "create": "变量",
+      "id": "变量ID",
+      "type": "变量类型",
+      "attribute": "变量属性",
+      "default": "变量默认值",
+      "description": "变量说明",
+      "operation": "变量操作",
+      "close": "关闭"
+    },
+    "functions": {
+      "name": "方法名称",
+      "type": "方法类型",
+      "parameters": "方法参数",
+      "description": "方法说明",
+      "isReturn": "是否有返回值",
+      "operation": "操作",
+      "create": "创建",
+      "edit": "编辑方法",
+      "close":"关闭",
+      "search_placeholder": "搜索方法ID或方法说明"
+    }
+  },
+  "pages": {
+    "attribute": {
+      "exterior": "外观",
+      "correlation": "关联",
+      "event": "事件",
+      "style": "样式",
+      "text": "文本",
+      "base_info": "基本信息",
+      "component_id": "组件ID",
+      "component_name": "组件名称",
+      "layout": "布局",
+      "flex_direction": "布局方向",
+      "flex_wrap": "换行",
+      "nowrap": "不换行",
+      "wrap": "换行",
+      "wrap_reverse": "反向换行",
+      "justify_content": "主轴对齐",
+      "align_items": "交叉轴对齐",
+      "base_style": "基础样式",
+      "background": "背景",
+      "border": "边框",
+      "border_radius": "圆角",
+      "solid": "实线",
+      "dashed": "虚线",
+      "color": "颜色",
+      "line": "线条",
+      "radius": "圆角",
+      "top": "上",
+      "bottom": "下",
+      "left": "左",
+      "right": "右",
+      "letter_spacing": "间距",
+      "line_height": "行高",
+      "text_indent": "缩进",
+      "text_overflow": "文字溢出",
+      "hidden": "隐藏",
+      "ellipsis": "省略号",
+      "scroll": "滚动",
+      "unset": "不设置",
+      "shadow": "阴影",
+      "dim": "模糊",
+      "opacity": "透明度",
+      "z_index": "层级",
+      "width": "宽度",
+      "height": "高度",
+      "margin": "外边距",
+      "padding": "内边距",
+      "auto": "自动",
+      "percent": "百分比",
+      "pixel": "像素",
+      "rem": "Rem",
+      "attribute": "属性",
+      "left_top": "左上",
+      "right_top": "右上",
+      "left_bottom": "左下",
+      "right_bottom": "右下",
+      "component_update": "组件更新",
+      "ai_edit": "AI 编辑",
+      "ai_summary": "AI 总结",
+      "ai_summary_tip": "AI 总结是一个可以把组件属性转为文字描述的功能",
+      "component_literal_description": "组件文字描述",
+      "no_selection_component": "没有选择组件"
+    },
+    "portal_page_cannot_deleted": "入口页面不能删除",
+    "events": {
+      "add_events": "添加事件",
+      "event": "事件",
+      "please_select_event_type": "请选择事件类型",
+      "event_exists": "该事件已存在，请选择其他事件类型",
+      "please_select_event_function": "请选择事件方法",
+      "select_event_type_first": "请先选择事件类型",
+      "no_event_prompt": "现在还没有事件哦，点击按钮添加事件！"
+    },
+    "generate_page_error": "生成的页面有错误，请重新尝试"
+  },
+  "common": {
+    "unsupported_feature": "功能尚未支持",
+    "project_not_ready": "项目信息尚未准备好, 请稍后再试",
+    "are_you_sure_delete": "您确认想要删除吗？",
+    "cancel": "取消",
+    "delete": "删除",
+    "copy": "复制",
+    "submit": "提交"
+  },
+  "error": {
+    "RESOURCE_NOT_FOUND": "找不到对应的资源",
+    "UNKNOWN_ERROR": "未知错误，请稍后再试",
+    "INVALID_USERNAME_OR_PASSWORD": "用户名或密码错误"
+  }
+}

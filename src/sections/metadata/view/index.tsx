@@ -1,0 +1,1 @@
+export { default as MetadataView } from './metadata-view';

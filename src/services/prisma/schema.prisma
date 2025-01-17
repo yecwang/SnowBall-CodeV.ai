@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DB_URL")
+}
+
+model User {
+  id               Int           @id @default(autoincrement())
+  username         String        @unique
+  password         String
+  displayname      String        @default("")
+  awatar           String        @default("")
+  language         String        @default("")
+  email            String        @unique
+  phone            String        @default("")
+  status           UserStatus    @default(ENABLED)
+  isLocked         Boolean       @default(false)
+  loginFailedCount Int           @default(0)
+  lockedTime       DateTime?
+  extra            Json?
+  ctime            DateTime      @default(now())
+  utime            DateTime      @default(now())
+  idDeleted        Boolean       @default(false)
+  Project          Project[]
+}
+
+model Project {
+  id            Int           @id @default(autoincrement())
+  creator       User          @relation(fields: [creatorID], references: [id])
+  creatorID     Int
+  name          String
+  description   String
+  status        ProjectStatus @default(CREATED)
+  path          String?
+  extra         Json?
+  isLocked      Boolean       @default(false)
+  ctime         DateTime      @default(now())
+  utime         DateTime      @default(now())
+  versions      ProjectVersion[] @relation(name: "VersionList")
+}
+
+model ProjectVersion {
+  id            Int           @id @default(autoincrement())
+  name          String
+  description   String
+  status        ProjectVersionStatus @default(UNPUBLISHED)
+  projectID     Int
+  ctime         DateTime      @default(now())
+  utime         DateTime      @default(now())
+  project       Project       @relation(name: "VersionList", fields: [projectID], references: [id])
+}
+
+enum UserStatus {
+  ENABLED
+  DISABLED
+}
+
+enum ProjectStatus {
+  CREATED
+  DESIGNING
+  RELEASED
+}
+
+enum ProjectVersionStatus {
+  RELEASED_PROD
+  RELEASED_TEST
+  UNPUBLISHED
+}

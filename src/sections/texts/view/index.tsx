@@ -1,0 +1,1 @@
+export { default as TextsView } from './texts-view';

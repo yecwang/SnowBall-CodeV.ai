@@ -1,0 +1,61 @@
+{
+  "header": {
+    "project": {
+      "menu_title": "Project",
+      "create": "Create Project",
+      "open": "Open Project"
+    },
+    "template": {
+      "menu_title": "Templates",
+      "create": "Create Template",
+      "open": "Open Template"
+    },
+    "developerment": {
+      "menu_title": "Developerment",
+      "save": "Save",
+      "run": "Run",
+      "publish": "Publish"
+    }
+  },
+  "dashboard": {
+    "menu": {
+      "management": "Management"
+    }
+  },
+  "project": {
+    "title": "Project Design",
+    "setting": "Setting",
+    "function": "Functions",
+    "variable": "Variables",
+    "metadata": "Metadata",
+    "texts": "Texts",
+    "pages": {
+      "title": "Pages",
+      "attribute_editor": {
+        "save": "Save"
+      }
+    },
+    "menu": {
+      "project": "Project",
+      "template": "Template",
+      "developerment": "Developerment"
+    },
+    "new_edit": {
+      "title_create": "Create Project",
+      "title_edit": "Edit Project",
+      "name": "Project Name",
+      "name_placeholder": "Please enter project name",
+      "description": "Project Description",
+      "description_placeholder": "Please enter project description",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "name_required": "Project name is required",
+      "description_required": "Project description is required"
+    }
+  },
+  "error": {
+    "RESOURCE_NOT_FOUND": "Can not find resource",
+    "UNKNOWN_ERROR": "Unknown error",
+    "INVALID_USERNAME_OR_PASSWORD": "Invalid username or password"
+  }
+}

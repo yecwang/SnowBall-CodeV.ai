@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `Project` MODIFY `status` ENUM('EDITABLE', 'FREEZE') NOT NULL DEFAULT 'EDITABLE';

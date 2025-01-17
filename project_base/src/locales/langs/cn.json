@@ -1,0 +1,56 @@
+{
+  "header": {
+    "project": {
+      "menu_title": "项目",
+      "create": "创建项目",
+      "open": "打开项目"
+    },
+    "template": {
+      "menu_title": "模板",
+      "create": "创建模板",
+      "open": "打开模板"
+    },
+    "developerment": {
+      "menu_title": "开发",
+      "save": "保存",
+      "run": "运行",
+      "publish": "发布"
+    }
+  },
+  "dashboard": {
+    "menu": {
+      "management": "管理"
+    }
+  },
+  "project": {
+    "title": "应用设计",
+    "setting": "设置",
+    "function": "方法",
+    "variable": "变量",
+    "metadata": "数据",
+    "texts": "多语言",
+    "pages": {
+      "title": "页面",
+      "attribute_editor": {
+        "save": "保存"
+      }
+    },
+    "new_edit": {
+      "title_create": "创建项目",
+      "title_edit": "编辑项目",
+      "name": "项目名称",
+      "name_placeholder": "请输入项目名称",
+      "description": "项目描述",
+      "description_placeholder": "请输入项目描述",
+      "submit": "提交",
+      "cancel": "取消",
+      "name_required": "请输入项目名称",
+      "description_required": "请输入项目描述"
+    }
+  },
+  "error": {
+    "RESOURCE_NOT_FOUND": "找不到对应的资源",
+    "UNKNOWN_ERROR": "未知错误，请稍后再试",
+    "INVALID_USERNAME_OR_PASSWORD": "用户名或密码错误"
+  }
+}

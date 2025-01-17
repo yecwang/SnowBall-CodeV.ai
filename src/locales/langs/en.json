@@ -1,0 +1,265 @@
+{
+  "header": {
+    "project": {
+      "menu_title": "Project",
+      "create": "Create Project",
+      "open": "Open Project"
+    },
+    "template": {
+      "menu_title": "Templates",
+      "create": "Create Template",
+      "open": "Open Template"
+    },
+    "developerment": {
+      "menu_title": "Developerment",
+      "save": "Save",
+      "run": "Run",
+      "publish": "Publish"
+    },
+    "run_simulation": {
+      "title": "Run simulation",
+      "starting": "Starting",
+      "closing": "Closing",
+      "failed_tip": "Project startup failure Please refresh and try again"
+    },
+    "title": {
+      "primary": "Application Builder",
+      "secondary": "Application development SAAS platform"
+    }
+  },
+  "dashboard": {
+    "menu": {
+      "management": "Management"
+    }
+  },
+  "pages": {
+    "attribute": {
+      "exterior": "Exterior",
+      "correlation": "Correlation",
+      "event": "Event",
+      "style": "Style",
+      "text": "Text",
+      "base_info": "Base Info",
+      "component_id": "Component ID",
+      "component_name": "Component Name",
+      "layout": "Layout",
+      "flex_direction": "Flex Direction",
+      "flex_wrap": "Flex Wrap",
+      "nowrap": "No Wrap",
+      "wrap": "Wrap",
+      "wrap_reverse": "Wrap Reverse",
+      "justify_content": "Justify Content",
+      "align_items": "Align Items",
+      "base_style": "Base Style",
+      "background": "Background",
+      "border": "Border",
+      "border_radius": "Border Radius",
+      "solid": "Solid",
+      "dashed": "Dashed",
+      "color": "Color",
+      "line": "Line",
+      "radius": "Radius",
+      "top": "Top",
+      "bottom": "Bottom",
+      "left": "Left",
+      "right": "Right",
+      "letter_spacing": "Letter Spacing",
+      "line_height": "Line Height",
+      "text_indent": "Text Indent",
+      "text_overflow": "Text Overflow",
+      "hidden": "Hidden",
+      "ellipsis": "Ellipsis",
+      "scroll": "Scroll",
+      "unset": "Unset",
+      "shadow": "Shadow",
+      "dim": "Dim",
+      "opacity": "Opacity",
+      "z_index": "Z Index",
+      "width": "Width",
+      "height": "Height",
+      "margin": "Margin",
+      "padding": "Padding",
+      "auto": "Auto",
+      "percent": "Percent",
+      "pixel": "Pixel",
+      "rem": "Rem",
+      "attribute": "Attribute",
+      "left_top": "Left Top",
+      "right_top": "Right Top",
+      "left_bottom": "Left Bottom",
+      "right_bottom": "Right Bottom",
+      "component_update": "Component update",
+      "ai_edit": "AI Edit",
+      "ai_summary": "AI summary",
+      "ai_summary_tip": "AI Summary is a feature that turns component properties into literal descriptions",
+      "component_literal_description": "Component literal description",
+      "no_selection_component": "No selection component"
+    },
+    "portal_page_cannot_deleted": "The portal page cannot be deleted",
+    "events": {
+      "add_events": "Add Events",
+      "event": "Event",
+      "please_select_event_type": "Please select event type",
+      "event_exists": "This event already exists. Please select another event type",
+      "please_select_event_function": "Please select event function",
+      "select_event_type_first": "Please select event type first",
+      "no_event_prompt": "There are no events now, click the button to add events!"
+    },
+    "generate_page_error": "The generated page has errors, please try again"
+  },
+  "project": {
+    "title": "Project Design",
+    "setting": "Setting",
+    "function": "Functions",
+    "variable": "Variables",
+    "metadata": "Metadata",
+    "texts": "Texts",
+    "create":"Create Project",
+    "list": "Project List",
+    "open_history":"Open History",
+    "welcome": "Welcome to Application Builder",
+    "status": {
+      "CREATED": "Created",
+      "DESIGNING": "Designing",
+      "RELEASED": "Released"
+    },
+    "pages": {
+      "title": "Pages",
+      "attribute_editor": {
+        "save": "Save"
+      },
+      "menu": {
+        "add": "Add",
+        "copy": "Copy",
+        "delete": "Delete",
+        "move_up": "Move Up",
+        "move_down": "Move Down",
+        "rename": "Rename",
+        "new_group": "New Group",
+        "new_page": "New Page"
+      },
+      "components": {
+        "move_up": "Move Up",
+        "move_down": "Move Down",
+        "already_top": "Already at the top of the container",
+        "already_bottom": "Already at the bottom of the container"
+      }
+    },
+    "menu": {
+      "project": "Project",
+      "template": "Template",
+      "developerment": "Developerment"
+    },
+    "new_edit": {
+      "title_create": "Create Project",
+      "title_edit": "Edit Project",
+      "name": "Project Name",
+      "name_placeholder": "Please enter project name",
+      "description": "Project Description",
+      "description_placeholder": "Please enter project description",
+      "submit": "Submit",
+      "cancel": "Cancel",
+      "name_required": "Project name is required",
+      "description_required": "Project description is required"
+    },
+    "dashboard": {
+      "view": "view",
+      "edit": "edit",
+      "locked": "locked",
+      "versionHistory": "version",
+      "rename": "rename",
+      "export": "export",
+      "create_time": "create time",
+      "update_time": "update time",
+      "create_modal": {
+        "new":"新建项目",
+        "name":"方案名称",
+        "options":"新建方式",
+        "industry":"行业",
+        "subdivision":"细分",
+        "create":"创建",
+        "description":"项目描述"
+      },
+      "version_modal": {
+        "title": "historyVersion",
+        "close": "close",
+        "number": "version number",
+        "status": "status",
+        "option": "option",
+        "view": "view",
+        "recovered": "recovered"
+      },
+      "rename_modal": {
+        "title": "rename project",
+        "name": "project name",
+        "confirm": "Save",
+        "cancel": "Cancel"
+      },
+      "locked_modal": {
+        "title": "lock project",
+        "confirm": "Lock",
+        "content": "Once locked, this plan is in a non-editable state and needs to be unlocked before editing can be done.",
+        "cancel": "Cancel"
+      },
+      "version_status": {
+        "UNPUBLISHED": "unpublished",
+        "RELEASED_PROD": "released prod env",
+        "RELEASED_TEST": "released test env"
+      }
+    }
+  },
+  "project_design": {
+    "header_toolbar": {
+      "exit": "Exit",
+      "save": "Save",
+      "export": "Export",
+      "undo": "Undo",
+      "redo": "Redo",
+      "fullscreen": "Fullscreen",
+      "language": "Language",
+      "verify": "Verify",
+      "run": "Run",
+      "publish": "Publish",
+      "saved_success": "Project is saved successfully",
+      "search_placeholder": "Search",
+      "screen_capture": "Screen Capture",
+      "refresh": "Refresh"
+    },
+    "toolbox": {
+      "pages": "Pages",
+      "component_tree": "Component Tree",
+      "components": "Components",
+      "icons": "Icons",
+      "variables": "Variables",
+      "functions": "Functions",
+      "texts": "Texts",
+      "help": "Help"
+    },
+    "functions": {
+      "name": "function name",
+      "type": "function type",
+      "parameters": "parameters",
+      "description": "description",
+      "isReturn": "is return",
+      "operation": "operation",
+      "create": "create function",
+      "edit": "edit function",
+      "close":"close",
+      "search_placeholder": "search function name or description"
+    }
+  },
+  "common": {
+    "unsupported_feature": "Not supported yet",
+    "project_not_ready": "Project is not ready, please try again later",
+    "are_you_sure_delete": "Are you sure want to delete?",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "copy": "Copy",
+    "submit": "Submit"
+  },
+  "error": {
+    "RESOURCE_NOT_FOUND": "Can not find resource",
+    "UNKNOWN_ERROR": "Unknown error",
+    "INVALID_USERNAME_OR_PASSWORD": "Invalid username or password"
+  }
+}

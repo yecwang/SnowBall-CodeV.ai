@@ -1,0 +1,23 @@
+// .eslintignore
+build/*
+dist/*
+public/*
+src/reportWebVitals.js
+src/service-worker.js
+src/serviceWorkerRegistration.js
+src/setupTests.js
+ 
+**/node_modules/*
+**/project_base/*
+**/out/*
+**/.next/*
+next.config.js
+
+vite.config.js
+vite.config.ts
+
+**/tmp/*
+
+src/lib/client/jsinterpreter/serialize.js
+src/pluginapp-context-manager/funtions-lib/index.js
+
