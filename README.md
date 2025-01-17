@@ -1,7 +1,6 @@
-# tisoul-app-builder
+# SnowBall-CodeV.ai
 
-A app builder framework with Plugin design
-
+A visual applicaiton builder framework driven by AI
 ## NODE.JS
 
 - Node 16.x || 18.x
